@@ -5,13 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { BooksComponent } from './books/books.component';
+import { ChaptersComponent } from './chapters/chapters.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BooksComponent
+  
+    ChaptersComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

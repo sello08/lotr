@@ -1,20 +1,16 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { tap } from 'rxjs';
-import { RequestsService } from './../requests.service';
+import { HttpClient } from '@angular/common/http';
+import { RequestsService } from '../requests.service';
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  selector: 'app-movies',
+  templateUrl: './movies.component.html',
+  styleUrls: ['./movies.component.css']
 })
-export class BooksComponent implements OnInit {
-
+export class MoviesComponent implements OnInit {
 
   public books : any;
-
+  
   constructor(private requestsService : RequestsService, private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -22,7 +18,4 @@ export class BooksComponent implements OnInit {
     this.http.get<any>('https://the-one-api.dev/v2/movie' , { headers }).subscribe(data => {this.books = data.docs});
     
   }
-
-
-
 }
