@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ChaptersComponent } from './chapters/chapters.component';
 import { MoviesComponent } from './movies/movies.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { CharactersComponent } from './characters/characters.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MoviesComponent } from './movies/movies.component';
     HeaderComponent,
   
     ChaptersComponent,
-    MoviesComponent
+    MoviesComponent,
+    QuotesComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,
