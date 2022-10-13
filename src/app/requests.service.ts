@@ -9,10 +9,12 @@ import { observable, tap } from 'rxjs';
 })
 export class RequestsService {
 
-  public books : any;
+  
   constructor(private http : HttpClient) { 
   }
-  getBooks(){
-    return this.http.get<any>('https://the-one-api.dev/v2/book').subscribe(data => this.books = data )
+  getMovies(){
+    const headers ={'Authorization' : 'Bearer R6AQaIenLRR2n8sTXqm7'}
+    return this.http.get<any>('https://the-one-api.dev/v2/movie' , { headers } );
+  
   }
 }
