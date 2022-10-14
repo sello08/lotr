@@ -1,4 +1,12 @@
 <div class="main-characters">
-    <p>characters works!</p>
+    <div class="characters-list">
+        <li (click) ="getCharacter(character)" *ngFor="let character of characters">{{character.name}}</li>
+    </div>
+    <div class="characters-content">
+        <span> <h3>Name:</h3> {{cName}} </span>  
+        <span> <h3>Race:</h3> {{cRace}} </span> 
+        <span> <h3>Gender:</h3> {{cGender}} </span> 
+        <span> <h3>Spouse:</h3> {{cSpouse}} </span> 
+    </div>
 </div>
 

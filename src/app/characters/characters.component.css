@@ -1,11 +1,40 @@
 .main-characters{
-    margin-left: 150px;
+    display: flex;
+    margin-left: 130px;
     margin-top: 50px;
-    cursor: pointer;
-    list-style-type:lower-greek;
-    
     
 }
 li:hover{
     color: rgba(23, 106, 30, 0.6)
+}
+.main-characters li{
+    cursor: pointer;
+    list-style-type:lower-greek;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    
+}
+.characters-list{
+    border: 1px solid black;
+    width: 450px;
+    height: 600px;
+    overflow: scroll;
+}
+.characters-content{
+    margin-left: 10px;
+    width: 780px;
+    height: 600px;
+    border: 1px dotted black;
+}
+.characters-content h3{
+    background-color: rgba(248, 248, 133, 0.929);
+    color: rgb(74, 74, 153);
+    font-size: medium;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+    border-radius: 5px;
 }
