@@ -14,24 +14,27 @@ export class CharactersComponent implements OnInit {
   public cRace : any;
   public cGender : any; 
   public cSpouse : any;
+  public quotes : any;
 
 
 
 
-  constructor(private reuestService : RequestsService) { }
+  constructor(private requestService : RequestsService) { }
 
   ngOnInit(): void {
     this.getCharacters();
   }
 
   getCharacters(){
-    this.reuestService.getCharacters().subscribe(data => {this.characters = data.docs})
+    this.requestService.getCharacters().subscribe(data => {this.characters = data.docs})
   }
+  
 
   getCharacter(character: any){
     this.cName = character.name;
     this.cRace = character.race;
     this.cGender = character.gender;
-    this.cSpouse = character.spouse
+    this.cSpouse = character.spouse;
+    this.requestService.getCharacterQuotes(character._id).subscribe(data => {this.quotes = data.docs})
+    }
   }
-}

@@ -25,16 +25,34 @@ li:hover{
 .characters-content{
     margin-left: 10px;
     width: 780px;
-    height: 600px;
+    height: 270px;
     border: 1px dotted black;
 }
 .characters-content h3{
-    background-color: rgba(248, 248, 133, 0.929);
+    display: inline-block;
+    background-color: rgba(248, 210, 133, 0.621);
     color: rgb(74, 74, 153);
-    font-size: medium;
+    font-size: small;
+    font-weight: lighter;
     width: 100px;
     height: 30px;
     text-align: center;
-    vertical-align: center;
-    border-radius: 5px;
+    border-radius: 2px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.characters-content span{
+    color: black;
+    display: flex;
+    margin-left: 150px;
+    font-weight: lighter;
+    margin-top: -10px;
+    font-size: 16px;
+    width: 100px;
+}
+.character-quotes{
+    border: 1px dotted black;
+    width: 780px;
+    height: 318px;
+    margin-top: 18px;
 }

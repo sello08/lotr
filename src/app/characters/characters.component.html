@@ -3,10 +3,23 @@
         <li (click) ="getCharacter(character)" *ngFor="let character of characters">{{character.name}}</li>
     </div>
     <div class="characters-content">
-        <span> <h3>Name:</h3> {{cName}} </span>  
-        <span> <h3>Race:</h3> {{cRace}} </span> 
-        <span> <h3>Gender:</h3> {{cGender}} </span> 
-        <span> <h3>Spouse:</h3> {{cSpouse}} </span> 
+        <h3>Name: <span> {{cName}} </span>  </h3> 
+        <br>
+        <h3>Race: <span>  {{cRace}} </span>  </h3> 
+        <br>
+        <h3>Gender: <span> {{cGender}} </span>  </h3> 
+        <br>
+        <h3>Spouse: <span> {{cSpouse}} </span> </h3>  
+
+       
+        <div *ngIf="quotes" class="character-quotes">
+            <span> {{quotes[0].dialog}}</span>
+
+        </div>
+       
+        
     </div>
+    
+    
 </div>
 
