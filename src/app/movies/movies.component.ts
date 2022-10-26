@@ -23,7 +23,7 @@ export class MoviesComponent implements OnInit {
   }
 
   getMovies(){
-    this.requestsService.getMovies().subscribe(data => {this.movies = data.docs})
+    this.requestsService.getMovies().subscribe(data => this.movies = data.docs)
   }
 
 

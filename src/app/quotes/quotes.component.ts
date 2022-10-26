@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quotes',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
 
-  constructor() { }
+  public show: boolean = true;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+   
+  }
+
+  changeShow(){
+    //this.router.navigateByUrl("characters")
+    
   }
 
 }
