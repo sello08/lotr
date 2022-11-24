@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { RequestsService } from 'src/app/requests.service';
+import { Characters } from 'src/app/models/characters';
+import { RequestsService } from 'src/app/services/requests.service';
 
 
 @Component({
@@ -10,12 +11,12 @@ import { RequestsService } from 'src/app/requests.service';
 })
 export class CharactersComponent implements OnInit {
 
-  public characters : any;
-  public cName : any;
-  public cRace : any;
-  public cGender : any; 
-  public cSpouse : any;
-  public quote : any;
+  public characters !: Characters[];
+  public cName !: string;
+  public cRace !: string;
+  public cGender !: string; 
+  public cSpouse !: string;
+  public quote !: string;
   public isClicked : boolean = false;
 
 
@@ -32,7 +33,7 @@ export class CharactersComponent implements OnInit {
   }
   
 
-  getCharacter(character: any){
+  getCharacter(character: Characters){
     this.isClicked = true;
     this.cName = character.name;
     this.cRace = character.race;

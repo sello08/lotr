@@ -1,5 +1,7 @@
-import { RequestsService } from '../../requests.service';
+import { Chapters } from 'src/app/models/chapters';
+import { RequestsService } from '../../services/requests.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChaptersComponent implements OnInit {
   
-  public chapters : any;
+  public chapters !: Chapters[];
 
   constructor(private requestsService : RequestsService) { }
 
@@ -18,7 +20,7 @@ export class ChaptersComponent implements OnInit {
   }
 
   getChapters(){
-    this.requestsService.getChapters().subscribe(data => {this.chapters = data.docs})
+    this.requestsService.getChapters().subscribe(response => {this.chapters = response.docs})
   }
 
 }
