@@ -1,4 +1,4 @@
-import { RequestsService } from './../requests.service';
+import { RequestsService } from '../../requests.service';
 import { Component, OnInit } from '@angular/core';
 
 

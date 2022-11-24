@@ -4,21 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ChaptersComponent } from './chapters/chapters.component';
-import { MoviesComponent } from './movies/movies.component';
-import { QuotesComponent } from './quotes/quotes.component';
-import { CharactersComponent } from './characters/characters.component';
-
+import { HeaderComponent } from './components/header/header.component';
+import { ChaptersComponent } from './components/chapters/chapters.component';
+import { CharactersComponent } from './components/characters/characters.component';
+import { MoviesComponent } from './components/movies/movies.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-  
     ChaptersComponent,
-    MoviesComponent,
-    QuotesComponent,
-    CharactersComponent
+    CharactersComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
