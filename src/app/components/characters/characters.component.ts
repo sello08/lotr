@@ -35,12 +35,13 @@ export class CharactersComponent implements OnInit {
     this.isClicked = true;
     this.selectedCharacter = this.characters.find(data => data._id == character._id);
 
+    // Send request for a specific character quote....
     this.requestService.getCharacterQuotes(character._id).subscribe(data => {
 
         data.docs.length ? this.quote = data.docs[0].dialog : this.quote = "Could not find any quote for this character"
         
       })
-    }
 
+    }
     
   }

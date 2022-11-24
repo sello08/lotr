@@ -1,6 +1,28 @@
 <div class="main-movies">
   <div class="movies-list">
-    <li *ngFor="let movie of movies">{{ movie.name }}</li>
+    <li (click)="getMovie(movie)" *ngFor="let movie of movies">
+      {{ movie.name }}
+    </li>
   </div>
-  <div class="movies-content"></div>
+  <div *ngIf="isClicked" class="movies-content">
+    <img
+      src="../../../assets/nominee.png"
+      alt="nominee"
+      width="100"
+      height="100"
+    />
+    <span>
+      {{ selectedMovie?.academyAwardNominations }}
+    </span>
+
+    <img
+      src="../../../assets/award.png"
+      alt="nominee"
+      width="100"
+      height="100"
+    />
+    <span>
+      {{ selectedMovie?.academyAwardWins }}
+    </span>
+  </div>
 </div>
