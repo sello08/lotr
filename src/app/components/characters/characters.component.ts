@@ -12,11 +12,8 @@ import { RequestsService } from 'src/app/services/requests.service';
 export class CharactersComponent implements OnInit {
 
   public characters !: Characters[];
-  public cName !: string;
-  public cRace !: string;
-  public cGender !: string; 
-  public cSpouse !: string;
-  public quote !: string;
+  public selectedCharacter ?: Characters;
+  public quote !: string; 
   public isClicked : boolean = false;
 
 
@@ -34,20 +31,16 @@ export class CharactersComponent implements OnInit {
   
 
   getCharacter(character: Characters){
+
     this.isClicked = true;
-    this.cName = character.name;
-    this.cRace = character.race;
-    this.cGender = character.gender;
-    this.cSpouse = character.spouse;
+    this.selectedCharacter = this.characters.find(data => data._id == character._id);
+
     this.requestService.getCharacterQuotes(character._id).subscribe(data => {
 
-      if(data.docs.length){
-        this.quote = data.docs[0].dialog
-      }else{
-        this.quote = "Could not find any quote for this character"
-
-      }
-      
+        data.docs.length ? this.quote = data.docs[0].dialog : this.quote = "Could not find any quote for this character"
+        
       })
     }
+
+    
   }

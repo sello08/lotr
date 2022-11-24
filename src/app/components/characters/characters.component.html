@@ -6,19 +6,19 @@
   </div>
   <div *ngIf="isClicked" class="characters-content">
     <h3>
-      Name: <span> {{ cName }} </span>
+      Name: <span> {{ selectedCharacter?.name }} </span>
     </h3>
     <br />
     <h3>
-      Race: <span> {{ cRace }} </span>
+      Race: <span> {{ selectedCharacter?.race }} </span>
     </h3>
     <br />
     <h3>
-      Gender: <span> {{ cGender }} </span>
+      Gender: <span> {{ selectedCharacter?.gender }} </span>
     </h3>
     <br />
     <h3>
-      Spouse: <span> {{ cSpouse }} </span>
+      Spouse: <span> {{ selectedCharacter?.spouse }} </span>
     </h3>
 
     <div class="character-quotes">
