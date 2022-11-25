@@ -5,24 +5,35 @@
     </li>
   </div>
   <div *ngIf="isClicked" class="movies-content">
+    <!-----------------------------Nominee------------------------------------>
     <img
       src="../../../assets/nominee.png"
       alt="nominee"
-      width="100"
-      height="100"
+      width="40"
+      height="40"
     />
     <span>
       {{ selectedMovie?.academyAwardNominations }}
     </span>
-
-    <img
-      src="../../../assets/award.png"
-      alt="nominee"
-      width="100"
-      height="100"
-    />
+    <!-----------------------------Awards------------------------------------>
+    <img src="../../../assets/award.png" alt="award" width="40" height="40" />
     <span>
       {{ selectedMovie?.academyAwardWins }}
     </span>
+    <!-----------------------------Revenue------------------------------------>
+    <img src="../../../assets/money.png" alt="revenue" width="40" height="40" />
+    <span> {{ selectedMovie?.boxOfficeRevenueInMillions }} mn$ </span>
+    <!-----------------------------Runtime------------------------------------>
+    <img src="../../../assets/time.png" alt="revenue" width="30" height="30" />
+    <span> {{ selectedMovie?.runtimeInMinutes }} mn$ </span>
+    <!-----------------------------Nominee------------------------------------>
+    <img
+      src="../../../assets/tomato.png"
+      alt="revenue"
+      width="30"
+      height="30"
+    />
+    <span> {{ selectedMovie?.rottenTomatoesScore }} </span>
   </div>
 </div>
+s
