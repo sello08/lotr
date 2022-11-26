@@ -17,25 +17,56 @@ li:hover{
     
 }
 .movies-list{
-    border: 1px solid black;
+    background-color: rgba(169, 169, 169, 0.010);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     width: 450px;
     height: 600px;
 }
 .movies-content{
+    margin-top: -22px;
     margin-left: 10px;
     width: 780px;
     height: 600px;
-    border: 1px dotted black;
 }
 
 .movies-content span{
-    color: red;
-    margin-left: -110px;
-    font-weight: 100;
+    margin-left: -80px;
+    font-weight: 900;
     font-size:smaller;
 }
 
 .movies-content img{
-    padding: 50px;
+    padding:50px;
     margin-top: -30px;
 }
+.panel-box{
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+.panel-heading{
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 26px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 131px;
+    font-family: 'Neusa Next Pro Compact',Impact,Arial,sans-serif;
+}
+.panel-heading::before {
+    margin-left: -135px;
+    background-color: rgb(255, 0, 0);
+    content: '';
+    min-width: 30px;
+    height: 28px;
+    position: absolute;
+}
+.panel-heading::after {
+    margin-left: 30px;
+    background-color: rgb(255, 0, 0);
+    content: '';
+    min-width: 100%;
+    height: 28px;
+    position: absolute;
+}
+
+

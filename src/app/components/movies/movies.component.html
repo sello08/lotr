@@ -4,36 +4,65 @@
       {{ movie.name }}
     </li>
   </div>
+
   <div *ngIf="isClicked" class="movies-content">
-    <!-----------------------------Nominee------------------------------------>
-    <img
-      src="../../../assets/nominee.png"
-      alt="nominee"
-      width="40"
-      height="40"
-    />
-    <span>
-      {{ selectedMovie?.academyAwardNominations }}
-    </span>
-    <!-----------------------------Awards------------------------------------>
-    <img src="../../../assets/award.png" alt="award" width="40" height="40" />
-    <span>
-      {{ selectedMovie?.academyAwardWins }}
-    </span>
-    <!-----------------------------Revenue------------------------------------>
-    <img src="../../../assets/money.png" alt="revenue" width="40" height="40" />
-    <span> {{ selectedMovie?.boxOfficeRevenueInMillions }} mn$ </span>
-    <!-----------------------------Runtime------------------------------------>
-    <img src="../../../assets/time.png" alt="revenue" width="30" height="30" />
-    <span> {{ selectedMovie?.runtimeInMinutes }} mn$ </span>
-    <!-----------------------------Nominee------------------------------------>
-    <img
-      src="../../../assets/tomato.png"
-      alt="revenue"
-      width="30"
-      height="30"
-    />
-    <span> {{ selectedMovie?.rottenTomatoesScore }} </span>
+    <section class="panel-box">
+      <h2 class="panel-heading">
+        <span>{{ selectedMovie?.name }}</span>
+      </h2>
+      <div class="panel-about"></div>
+    </section>
+    <section class="panel-info">
+      <h2 class="panel-heading">
+        <span>Moive with NUMBERS</span>
+      </h2>
+      <div class="panel-about-info">
+        <!-----------------------------Nominee------------------------------------>
+        <img
+          src="../../../assets/nominee.png"
+          alt="nominee"
+          width="40"
+          height="40"
+        />
+        <span>
+          {{ selectedMovie?.academyAwardNominations }}
+        </span>
+        <!-----------------------------Awards------------------------------------>
+        <img
+          src="../../../assets/award.png"
+          alt="award"
+          width="40"
+          height="40"
+        />
+        <span>
+          {{ selectedMovie?.academyAwardWins }}
+        </span>
+        <!-----------------------------Revenue------------------------------------>
+        <img
+          src="../../../assets/money.png"
+          alt="revenue"
+          width="40"
+          height="40"
+        />
+        <span> {{ selectedMovie?.boxOfficeRevenueInMillions }} mn$ </span>
+        <!-----------------------------Runtime------------------------------------>
+        <img
+          src="../../../assets/time.png"
+          alt="revenue"
+          width="30"
+          height="30"
+        />
+        <span> {{ selectedMovie?.runtimeInMinutes }}</span>
+
+        <!-----------------------------Score------------------------------------>
+        <img
+          src="../../../assets/tomato.png"
+          alt="revenue"
+          width="30"
+          height="30"
+        />
+        <span> {{ selectedMovie?.rottenTomatoesScore }} </span>
+      </div>
+    </section>
   </div>
 </div>
-s
