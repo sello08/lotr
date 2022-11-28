@@ -18,7 +18,7 @@ export class MoviesComponent implements OnInit {
   public isClicked : boolean = false;
   public movie !: string;
   public allMovieData = MoviesData;
-  public selectedMovieData !: string | undefined;
+  public selectedMovieData !: MovieData | undefined;
   
   
   constructor(private requestsService : RequestsService) { }
@@ -36,7 +36,7 @@ export class MoviesComponent implements OnInit {
   getMovie(movie : Movies){
     this.isClicked = true;
     this.selectedMovie = this.movies.find(data => data._id == movie._id)
-    this.selectedMovieData = this.allMovieData.find(data => data.id == movie._id)?.content
+    this.selectedMovieData = this.allMovieData.find(data => data.id == movie._id)
   }
 
 

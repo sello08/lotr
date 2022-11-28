@@ -11,14 +11,14 @@ li:hover{
     cursor: pointer;
     list-style-type:lower-greek;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
-    text-align: center;
-    padding: 10px;
+    font-size: 15px;
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     
 }
 .characters-list{
-    border: 1px solid black;
-    width: 450px;
+    width: 350px;
     height: 600px;
     overflow: scroll;
 }
@@ -26,7 +26,6 @@ li:hover{
     margin-left: 10px;
     width: 780px;
     height: 270px;
-    border: 1px dotted black;
 }
 .characters-content h3{
     display: inline-block;
@@ -51,7 +50,6 @@ li:hover{
     width: 100px;
 }
 .character-quotes{
-    border: 1px dotted black;
     width: 780px;
     height: 318px;
     margin-top: 18px;

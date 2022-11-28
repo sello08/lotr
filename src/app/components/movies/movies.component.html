@@ -10,8 +10,16 @@
       <h2 class="panel-heading">
         <span>{{ selectedMovie?.name }}</span>
       </h2>
-      <div class="panel-about">
-        {{ selectedMovieData }}
+      <div class="panel-data">
+        {{ selectedMovieData?.content }}
+      </div>
+    </section>
+    <section class="panel-players">
+      <h2 class="panel-heading">
+        <span>Players of Movie</span>
+      </h2>
+      <div class="panel-data">
+        {{ selectedMovieData?.player }}
       </div>
     </section>
     <section class="panel-info">
