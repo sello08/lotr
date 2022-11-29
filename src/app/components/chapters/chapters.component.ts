@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChaptersComponent implements OnInit {
   
   public chapters !: Chapters[];
+  public bookOfChapter !: any;
 
   constructor(private requestsService : RequestsService) { }
 
@@ -21,6 +22,10 @@ export class ChaptersComponent implements OnInit {
 
   getChapters(){
     this.requestsService.getChapters().subscribe(response => {this.chapters = response.docs})
+  }
+
+  getThisChapterBook(id: string){
+    this.requestsService.getBooks(id).subscribe(response => {this.bookOfChapter = response.docs[0].name})
   }
 
 }

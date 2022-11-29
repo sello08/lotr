@@ -5,7 +5,7 @@
     
 }
 li:hover{
-    color: rgba(23, 106, 30, 0.6)
+    color: rgb(255, 0, 0)
 }
 .main-movies li{
     cursor: pointer;

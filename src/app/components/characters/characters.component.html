@@ -14,11 +14,17 @@
     </h3>
     <br />
     <h3>
-      Gender: <span> {{ selectedCharacter?.gender }} </span>
+      Gender:
+      <span>
+        {{ selectedCharacter?.gender }}
+      </span>
     </h3>
     <br />
     <h3>
-      Spouse: <span> {{ selectedCharacter?.spouse }} </span>
+      Spouse:
+      <span>
+        {{ selectedCharacter?.spouse ? selectedCharacter?.spouse : "Unnamed" }}
+      </span>
     </h3>
 
     <div class="character-quotes">

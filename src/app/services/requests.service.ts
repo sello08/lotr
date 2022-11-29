@@ -32,7 +32,10 @@ export class RequestsService {
   getCharacterQuotes(id: any): Observable<any>{
     const headers = {'Authorization' : 'Bearer R6AQaIenLRR2n8sTXqm7'}
     return this.http.get<any>('https://the-one-api.dev/v2/character/'+ id + '/quote'  , { headers } );
-    
+  }
+  getBooks(id: string): Observable<any>{
+    const headers = {'Authorization' : 'Bearer R6AQaIenLRR2n8sTXqm7'}
+    return this.http.get<any>('https://the-one-api.dev/v2/book/' + id , { headers } );
   }
 
 }

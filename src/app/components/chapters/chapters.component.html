@@ -1,6 +1,11 @@
 <div class="main-chapters">
   <div class="chapters-list">
-    <li *ngFor="let chapter of chapters">{{ chapter.chapterName }}</li>
+    <li
+      (click)="getThisChapterBook(chapter.book)"
+      *ngFor="let chapter of chapters"
+    >
+      {{ chapter.chapterName }}
+    </li>
   </div>
-  <div class="chapters-content"></div>
+  <div class="chapters-content">{{ bookOfChapter }}</div>
 </div>
