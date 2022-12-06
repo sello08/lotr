@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,12 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  
+  public filter : string = ""
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  movies(){
+    this.filter = "Search for Movie"
+  }
+  chapters(){
+    this.filter = "Search for Chapter"
+  }
+  characters(){
+    this.filter = "Search for Character"
+  }
+
 
 }

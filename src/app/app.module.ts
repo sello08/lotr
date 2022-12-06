@@ -8,13 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { ChaptersComponent } from './components/chapters/chapters.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { FilterMoviePipe } from './pipes/filter-movie.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ChaptersComponent,
     CharactersComponent,
-    MoviesComponent
+    MoviesComponent,
+    FilterMoviePipe
   ],
   imports: [
     BrowserModule,

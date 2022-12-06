@@ -1,7 +1,13 @@
 <div class="main-header">
   <h1 class="main-title">LOTR</h1>
-  <input class="searchBar" placeholder="Search for Characters" />
-  <span class="main-button1" routerLink="/movies">Movies</span>
-  <span class="main-button2" routerLink="/characters">Characters</span>
-  <span class="main-button3" routerLink="/chapters">Chapters</span>
+  <input class="searchBar" placeholder="{{ filter }}" />
+  <span (click)="movies()" class="main-button1" routerLink="/movies"
+    >Movies</span
+  >
+  <span (click)="characters()" class="main-button2" routerLink="/characters"
+    >Characters</span
+  >
+  <span (click)="chapters()" class="main-button3" routerLink="/chapters"
+    >Chapters</span
+  >
 </div>
